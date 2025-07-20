@@ -7,7 +7,6 @@
 - User info in Postgres
 - OTP in Redis with TTL
 - JWT token after login
-- Rate limiting (to be added)
 - Swagger docs
 
 ### Run locally
