@@ -1,0 +1,37 @@
+openapi: 3.0.0
+info:
+  title: OTP Auth API
+  version: 1.0.0
+paths:
+  /auth/request:
+    post:
+      summary: Request OTP
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                mobile:
+                  type: string
+      responses:
+        '200':
+          description: OTP sent
+  /auth/verify:
+    post:
+      summary: Verify OTP
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                mobile:
+                  type: string
+                otp:
+                  type: string
+      responses:
+        '200':
+          description: JWT token
